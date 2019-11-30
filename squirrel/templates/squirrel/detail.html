@@ -1,0 +1,62 @@
+<html>
+<body>
+<head>
+<title> {{sq.unique_squirrel_id}}</title>
+</head>
+<h2>
+Detailed Information of Squirrel {{sq.unique_squirrel_id}}
+</h2>
+<form action=""  method='post'>
+{% csrf_token %}  
+  Latitude: <input type="text" value={{ sq.latitude }} name='latitude'><br>
+  Longitude: <input type="text" value={{ sq.longitude }} name='longitude'><br>
+  Unique Squirrel ID: <input type="text" value={{ sq.unique_squirrel_id }} name='unique_squirrel_id'><br>
+  Shift: <select name='shift'>
+         <option value="AM" {%if sq.shift == 'AM'%} selected="selected" {% endif %}>AM</option>
+         <option value="PM" {%if sq.shift == 'PM'%} selected="selected" {% endif %}>PM</option>
+         </select><br>
+
+
+  Date: <input type="date" value={{ sq.date|date:'Y-m-d'}} name="date"><br>
+  Age: <select name='age'>
+         <option value="Adult"{%if sq.age == 'Adult'%} selected="selected" {% endif %}>Adult</option>
+         <option value="Juvenile"{%if sq.age == 'Juvenile'%} selected="selected" {% endif %}>Juvenile</option>
+         </select><br>
+  
+
+  Primary Fur Color:<select name='primary_fur_color'>
+         <option value="Gray" {%if sq.primary_fur_color == 'Gray'%} selected="selected" {% endif %}>Gray</option>
+         <option value="Cinnamon"{%if sq.primary_fur_color == 'Cinnamon'%} selected="selected" {% endif %}>Cinnamon</option>
+         <option value="Black"{%if sq.primary_fur_color == 'Black'%} selected="selected" {% endif %}>Black</option>
+         </select><br>
+  
+
+  Location:<select name='location'>
+         <option value="Ground Plane" {%if sq.location == 'Gound Plane'%} selected="selected" {% endif %}>Ground Plane</option>
+         <option value="Above Ground" {%if sq.location == 'Above Ground'%} selected="selected" {% endif %}>Above Ground</option>
+         </select><br>
+  
+
+  Specific Location:<input type="text" value={{ sq.specific_location}} name="specific_location"><br>
+  Running:<input type="checkbox" {%if sq.running == True %} checked='checked' {% endif %} name='running'><br>
+  Chasing:<input type="checkbox" {%if sq.chasing == True %} checked='checked' {% endif %} name="chasing"><br>
+  Climbing:<input type="checkbox" {%if sq.climbing == True %} checked='checked' {% endif %} name="climbing"><br>
+  Eating:<input type="checkbox" {%if sq.eating == True %} checked='checked' {% endif %}  name="eating"><br>
+  Foraging:<input type="checkbox" {%if sq.foraging == True %} checked='checked' {% endif %}  name="foraging"><br>
+  Other Activities:<input type="text" value={{ sq.other_activities}} name="other_activities"><br>
+  Kuks:<input type="checkbox" {%if sq.kuks == True %} checked='checked' {% endif %} name="kuks"><br>
+  Quaas:<input type="checkbox" {%if sq.quaas == True %} checked='checked' {% endif %} name="quaas"><br>
+  Moans:<input type="checkbox" {%if sq.moans == True %} checked='checked' {% endif %} name="moans"><br>
+  Tail flags:<input type="checkbox" {%if sq.tail_flags == True %} checked='checked' {% endif %}  name="tail_flags"><br>
+  Tail twitches:<input type="checkbox" {%if sq.tail_twitches == True %} checked='checked' {% endif %} name="tail_twitches"><br>
+  Approaches:<input type="checkbox" {%if sq.approaches == True %} checked='checked' {% endif %} name="approaches"><br>
+  Indifferent:<input type="checkbox" {%if sq.indifferent == True %} checked='checked' {% endif %} name="indifferent"><br>
+  Runs from:<input type="checkbox" {%if sq.runs_from == True %} checked='checked' {% endif %} name="runs_from"><br>
+  <br>
+  <input type="submit" name='submit' value="Submit">
+  <input type="submit" name='delete' value="Delete">
+</form>
+ 
+</body>
+</html>
+

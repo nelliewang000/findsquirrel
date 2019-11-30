@@ -1,0 +1,61 @@
+<html>
+<body>
+
+<h2>
+Add Information of A New Squirrel
+</h2>
+<form action="" method='post'>
+{% csrf_token %}
+
+Latitude: <input type="text" name="latitude"><br>
+Longitude: <input type="text" name="longitude"><br>
+Unique Squirrel ID: <input type="text"  name="unique_squirrel_id"><br>
+Shift: <select name='shift'>
+         <option value="AM">AM</option>
+         <option value="PM">PM</option>
+         </select><br>
+
+
+Date: <input type="date" name="date"><br>
+Age: <select name='age'>
+         <option value="Adult">Adult</option>
+         <option value="Juvenile">Juvenile</option>
+         </select><br>
+
+
+
+Primary Fur Color:<select name='primary_fur_color'>
+         <option value="Gray">Gray</option>
+         <option value="Cinnamon">Cinnamon</option>
+         <option value="Black">Black</option>
+         </select><br>
+
+
+Location:<select name='location'>
+         <option value="Ground Plane">Ground Plane</option>
+         <option value="Above Ground">Above Ground</option>
+         </select><br>
+
+
+Specific Location:<input type="text" name="specific_location"><br>
+Running:<input type="checkbox" name="running"><br>
+Chasing:<input type="checkbox" name="chasing"><br>
+Climbing:<input type="checkbox"  name="climbing"><br>
+Eating:<input type="checkbox" name="eating"><br>
+Foraging:<input type="checkbox" name="foraging"><br>
+Other Activities:<input type="text" name="other_activities"><br>
+Kuks:<input type="checkbox" name="kuks"><br>
+Quaas:<input type="checkbox" name="quaas"><br>
+Moans:<input type="checkbox" name="moans"><br>
+Tail flags:<input type="checkbox" name="tail_flags"><br>
+Tail twitches:<input type="checkbox" name="tail_twitches"><br>
+Approaches:<input type="checkbox" name="approaches"><br>
+Indifferent:<input type="checkbox" name="indifferent"><br>
+Runs from:<input type="checkbox" name="runs_from"><br>
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
