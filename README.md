@@ -1,4 +1,13 @@
 # Find Squirrel
+
+Group 35
+
+Yikun Liu yl4299
+
+Junli Wang jw3876
+
+Section 2
+
 This is the final project for the course Tools For Analytics.
 We developed a website called "Squirrel Tracker" based on the data from the 2018 NYC census file. The data has 3023 squirrels records. 
 Our website displays the following pages with functions:
