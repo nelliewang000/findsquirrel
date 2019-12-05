@@ -27,8 +27,6 @@ def add(request):
             add.save()
             return redirect("/squirrel/sightings/") 
         else:
-            for key,value in request.POST.items():
-                print(key,value)
             print(add.errors)
     return render(request, 'squirrel/add.html')
 
